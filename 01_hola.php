@@ -3,7 +3,8 @@
     <title>Hola</title>
 </head>
 <body>
-<h1>Fecha: <?= date("d.m.y")?></h1>
+<h1>Saludos</h1>
+<p>Fecha: <?= date("d.m.y")?></p>
 <?php
 if (date ("d") % 2 == 0) {
     echo "Hoy es un día par";
