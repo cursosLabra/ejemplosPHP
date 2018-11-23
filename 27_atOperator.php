@@ -2,5 +2,5 @@
 
 $x = @(3 / 0);
 
-echo $x;
+echo $x;  // INF
 

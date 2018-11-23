@@ -21,7 +21,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
         echo "POST";
     break;
     case "DELETE":
-        echo "POST";
+        echo "DELETE";
     break;
 }
 

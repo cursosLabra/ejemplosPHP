@@ -1,38 +1,40 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
+
 require_once 'parFact.php';
-class ParFactTest extends PHPUnit_Framework_TestCase
+
+class ParFactTest extends TestCase
 {
     function test_create_class() {
         $a = new ParFact();
         $this->assertTrue(is_a($a, 'ParFact'));
     }
-    // ...
+
     public function testPar4() {
         // Assert par 4
         $a = new ParFact();
-        $this->assertTrue(true == $a->par(4));
+        $this->assertEquals(true, $a->par(4));
     }
 
     public function testPar5() {
         // Assert par 5
         $a = new ParFact();
-        $this->assertTrue(false == $a->par(5));
+        $this->assertEquals(false, $a->par(5));
     }
 
     public function testPar7() {
         // Assert par 5
         $a = new ParFact();
-        $this->assertTrue(false == $a->par(7));
+        $this->assertEquals(false, $a->par(7));
     }
 
     /**
      * @dataProvider factorialProvider
      */
-
     public function testFact($n, $esperado) {
         $a = new ParFact();
-        $this->assertTrue($esperado == $a->fact($n));
+        $this->assertEquals($esperado, $a->fact($n));
     }
     public function factorialProvider()
     {
